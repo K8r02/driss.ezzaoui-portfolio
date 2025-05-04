@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Driss Ezzaoui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            padding: 1em;
+            z-index: 999;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        header {
+            padding: 6em 1em 2em;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 1em;
+            opacity: 0;
+            animation: fadeInText 2s 1s forwards;
+        }
+
+        .btn {
+            margin-top: 2em;
+            padding: 0.8em 2em;
+            border: none;
+            background: #ffffff;
+            color: #203a43;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #dddddd;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 3em auto;
+            padding: 2em;
+            max-width: 500px;
+            border-radius: 15px;
+            animation: fadeInText 2s ease-in;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        input, textarea {
+            padding: 0.8em;
+            border-radius: 10px;
+            border: none;
+            font-family: inherit;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            background: #ffffff;
+            color: #203a43;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #dddddd;
+        }
+
+        footer {
+            margin-top: 3em;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#contact">Contact</a>
+        <a href="portfolio.pdf">Portfolio PDF</a>
+    </nav>
+    <header>
+        <h1>Bienvenue sur mon portfolio</h1>
+        <p>Je suis Driss Ezzaoui, étudiant en design et communication visuelle.</p>
+        <a href="portfolio.pdf" class="btn">Voir le Portfolio</a>
+    </header>
+
+    <section class="contact-section" id="contact">
+        <h2>Contactez-moi</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Driss Ezzaoui. Tous droits réservés.
+    </footer>
+</body>
+</html>
